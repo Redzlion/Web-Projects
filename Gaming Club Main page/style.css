@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Audiowide", sans-serif;
+}
+body{
+    background-image: url('https://i.gifer.com/Az1x.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+.header {
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #632fd4;
+}
+
+.inner_header{
+width: 1000px;
+height: 100%;
+display: block;
+margin: 0 auto;
+}
+
+.logo{
+height: 100%;
+display: table;
+float: left;    
+}
+
+.logo h1{
+height: 100%;
+color: white;
+display: table-cell;
+vertical-align: middle;
+font-size: 32px; 
+font-weight: 200;   
+}
+
+.navigation{
+float: right;
+height: 100%;
+}
+
+.navigation a{
+height: 100%;
+display: table;
+float: left;
+padding: 0px 20px;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color:white;
+    font-size: 16px;
+}
+
+.navigation button{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color:white;
+    font-size: 16px;
+    background-color: #632fd4;
+    padding-left:150%;
+    border: none;
+}
+
+
+.pacman_logo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding-top: 5px;
+    padding-left: 15px;
+    height: 100%;
+    display: table;
+    float: left;  
+  }
+  
+  .pacman_logo:before,.pacman_logo:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 35px solid #000;
+    border-radius: 50%;
+    border-right: 35px solid transparent;
+    animation: animate1 linear 0.5s infinite;
+  }
+  
+  .pacman_logo:after {
+    animation: animate2 linear 0.5s infinite;
+  }
+
+  @keyframes animate1 {
+    0% {
+      transform: rotate(270deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(270deg);
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+
+  .notmain_p{
+    text-align: center;
+  }
+  .main_p{
+    text-align: center;
+    padding-top: 200px;
+  }
+  .fa {
+    font-size: 50px;
+    width: 30px;
+    text-align: bottom;
+    text-decoration: none;
+    border-radius: 50%;
+    float: right;
+    padding-top: 25%;
+    position: fixed;
+    bottom: 0;
+    right: 5;
+  }
+  .fa-twitter{
+    padding-right: 100px;
+    bottom: 0;
+    right: 0;
+  }
+  .fa-instagram{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 20px;
+  }
+  .fa-facebook{
+    position: fixed;
+    bottom: 00;
+    right: 0;
+    padding-right: 170px;
+  }

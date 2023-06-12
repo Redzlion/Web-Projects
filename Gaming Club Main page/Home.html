@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Gaming Club</title>
+        <link rel="stylesheet" href="./style.css"/>
+        <!-- <script src="./assets/js/main.js"></script> -->
+    </head>
+    <body>
+        <div class="main">
+            <header>
+                <div class="header">
+                    <div class="inner_header">
+                     <div class="logo">
+                        <h1>Pac-Club</h1>
+                     </div>
+                     <div class="pacman_logo"></div>
+                     <ul class="navigation">
+                        <a><li style="color:black">Home</li></a>
+                        <a><li>Booking</li></a>
+                        <a><li>Payment</li></a>
+                        <a class="Acc_Button" href="#"><button>Account</button></a>       
+                     </ul> 
+                    </div>
+                </div>
+            </header>
+            <div class="middle_text">
+                <p class="main_p" style="color:white"> The Home of Gaming Communtity</p>
+                <p class="notmain_p" style="color:white"> Come N Grind</p>
+                <p class="notmain_p" style="color:white">We Got Snacks ;)</p>
+            </div>   
+            <fotter>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a> 
+                <a href="#" class="fa fa-instagram"></a> 
+            </fotter>       
+        </div>
+    </body>
+</html>
+<canvas id="canvas" width="600" height="600"></canvas>
+
+<script>
+    // Get the canvas element and its context
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Set the starting position and direction of Pac-Man
+    let x = 300;
+    let y = 300;
+    let dx = 5;
+    let dy = 0;
+
+    // Create the Pac-Man character
+    function createPacMan() {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw Pac-Man's body
+        ctx.beginPath();
+        ctx.arc(x, y, 25, 0.15 * Math.PI, 1.85 * Math.PI);
+        ctx.lineTo(x, y);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+
+        // Draw Pac-Man's eye
+        ctx.beginPath();
+        ctx.arc(x + 10, y - 10, 5, 0, 2 * Math.PI);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        // Update the position of Pac-Man
+        x += dx;
+        y += dy;
+
+        // Change direction when Pac-Man hits a wall
+        if (x > canvas.width - 25 || x < 25) dx = -dx;
+        if (y > canvas.height - 25 || y < 25) dy = -dy;
+
+        // Request another animation frame
+        requestAnimationFrame(createPacMan);
+    }
+
+    // Start the animation
+    createPacMan();
+</script>
